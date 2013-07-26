@@ -4,13 +4,13 @@
 
 A [Flight](https://github.com/flightjs/flight) mixin that enriches components with underscore.js _.each function.
 
-## Installation
+### Installation
 
 ```bash
 bower install --save flight-withEach
 ```
 
-## Example
+### Example
 
 ```javascript
 define(function(require) {
@@ -21,15 +21,23 @@ define(function(require) {
   return defineComponent(fancyComponent, withEach);
 
   function fancyComponent() {
+    
+    // Logs each number in turn
     this.each([1, 2, 3], function(value, i) {
-        console.log(value, i);
+        console.log(value);
     });
+    
+    // Logs each number in turn
+    this.each({one: 1, two: 2, three: 3}, function(value, i){
+        console.log(value);
+    });
+    
   }
   
 });
 ```
 
-## Development
+### Development
 
 Development of this component requires [Bower](http://bower.io), and preferably
 [Karma](http://karma-runner.github.io) to be globally installed:
@@ -52,7 +60,7 @@ To continuously run the tests in Chrome and Firefox during development, just run
 karma start
 ```
 
-## Contributing to this project
+### Contributing to this project
 
 Anyone and everyone is welcome to contribute. Please take a moment to
 review the [guidelines for contributing](CONTRIBUTING.md).

@@ -1,8 +1,8 @@
 # flight-withEach
 
-[![Build Status](https://secure.travis-ci.org/<username>/flight-withEach.png)](http://travis-ci.org/<username>/flight-withEach)
+[![Build Status](https://secure.travis-ci.org/olivierlesnicki/flight-withEach.png)](http://travis-ci.org/olivierlesnicki/flight-withEach)
 
-A [Flight](https://github.com/flightjs/flight) component for…
+A [Flight](https://github.com/flightjs/flight) mixin that enriches components with underscore.js _.each function.
 
 ## Installation
 
@@ -12,7 +12,22 @@ bower install --save flight-withEach
 
 ## Example
 
-…
+```javascript
+define(function(require) {
+    
+  var defineComponent = require('flight/lib/component');
+  var withDialog      = require('bower_components/flight-withEach/lib/withEach');
+
+  return defineComponent(fancyComponent, withEach);
+
+  function fancyComponent() {
+    this.each([1, 2, 3], function(value, i) {
+        console.log(value, i);
+    });
+  }
+  
+});
+```
 
 ## Development
 

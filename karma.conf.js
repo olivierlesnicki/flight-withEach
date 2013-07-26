@@ -19,6 +19,7 @@ files = [
   REQUIRE_ADAPTER,
 
   // loaded without require
+  'bower_components/underscore/underscore.js',
   'bower_components/jquery/jquery.js',
   'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
   'bower_components/jasmine-flight/lib/jasmine-flight.js',
@@ -74,8 +75,7 @@ autoWatch = true;
 // - IE (only Windows)
 // CLI --browsers Chrome,Firefox,Safari
 browsers = [
-  'Chrome',
-  'Firefox'
+  'PhantomJS'
 ];
 
 // If browser does not capture in given timeout [ms], kill it

@@ -1,8 +1,9 @@
 {
   "name": "flight-withEach",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "dependencies": {
-    "flight": "~1.0.9"
+    "flight": "*",
+    "underscore": "*"
   },
   "devDependencies": {
     "jasmine-flight": "*",
